@@ -4,6 +4,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Silakov.Homework2", "src\Silakov.Homework2\Silakov.Homework2.csproj", "{7772AF5B-AED5-4FEC-B12B-F2312D62AA90}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Silakov.Homework1", "src\Silakov.Homework1\Silakov.Homework1.csproj", "{9C91A7C6-D4BC-4E1B-B88A-B1334553FDCB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Silakov.Homework3", "src\Silakov.Homework3\Silakov.Homework3.csproj", "{2ECBF536-E5B3-44A9-A7AA-39559752ADB1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,14 @@ Global
 		{7772AF5B-AED5-4FEC-B12B-F2312D62AA90}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7772AF5B-AED5-4FEC-B12B-F2312D62AA90}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7772AF5B-AED5-4FEC-B12B-F2312D62AA90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C91A7C6-D4BC-4E1B-B88A-B1334553FDCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C91A7C6-D4BC-4E1B-B88A-B1334553FDCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C91A7C6-D4BC-4E1B-B88A-B1334553FDCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C91A7C6-D4BC-4E1B-B88A-B1334553FDCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2ECBF536-E5B3-44A9-A7AA-39559752ADB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ECBF536-E5B3-44A9-A7AA-39559752ADB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ECBF536-E5B3-44A9-A7AA-39559752ADB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2ECBF536-E5B3-44A9-A7AA-39559752ADB1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
