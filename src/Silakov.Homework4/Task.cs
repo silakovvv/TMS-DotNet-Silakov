@@ -32,9 +32,20 @@ namespace Silakov.Homework4
         /// </summary>
         private DateTime _executionDate;
 
+        /// <summary>
+        /// Счётчик.
+        /// </summary>
         private static int counter = 1;
 
-        Task()
+        public int Id 
+        { 
+            get 
+            {
+                return _id;
+            } 
+        }
+
+        public Task()
         {
             Console.Write("Name: ");
             _name = Console.ReadLine();
@@ -47,7 +58,10 @@ namespace Silakov.Homework4
             counter += 1;
         }
 
-        public void Edit(int id)
+        /// <summary>
+        /// Редактировать задачу.
+        /// </summary>
+        public void Edit()
         {
             Console.Write("Name: ");
             _name = Console.ReadLine();
@@ -72,7 +86,7 @@ namespace Silakov.Homework4
             {
                 Console.WriteLine($"Execution date - {_executionDate}");
             }
-            Console.WriteLine("--------------------");
+            Console.WriteLine("-----------------------");
         }
 
         /// <summary>
@@ -80,6 +94,8 @@ namespace Silakov.Homework4
         /// </summary>
         public void ChangeStatus()
         {
+            Console.WriteLine("List of possible statuses:");
+            
             int numStatus = 1;
             foreach (StatusTask status in Enum.GetValues(typeof(StatusTask)))
             {
@@ -106,7 +122,7 @@ namespace Silakov.Homework4
                 return;
             }
 
-            _status = (StatusTask)Enum.GetValues(typeof(StatusTask)).GetValue(chosenIndexStatus);
+            _status = (StatusTask)Enum.GetValues(typeof(StatusTask)).GetValue(chosenIndexStatus-1);
             
             if (_status == StatusTask.completed)
             {
