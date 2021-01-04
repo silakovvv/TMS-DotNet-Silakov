@@ -10,15 +10,7 @@ namespace Silakov.Homework4
         {
             var scheduler = new Scheduler();
 
-            scheduler.AddTask();
-            scheduler.AddTask();
-            scheduler.AddTask();
-
-            scheduler.OutputAllTasks();
-
-            scheduler.EditTask();
-            
-            scheduler.OutputAllTasks();
+            scheduler.Menu();
 
             Console.ReadKey();
         }

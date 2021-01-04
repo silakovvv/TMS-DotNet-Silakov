@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Silakov.Homework4
 {
-    public class Scheduler
+    public class Scheduler : IMenu
     {
         /// <summary>
         /// Список задач.
@@ -33,7 +33,7 @@ namespace Silakov.Homework4
         {
             int idTask;
 
-            Console.Write("Input id task: ");
+            Console.Write("\nInput id task: ");
             try
             {
                 idTask = Convert.ToInt32(Console.ReadLine());
@@ -113,6 +113,56 @@ namespace Silakov.Homework4
             {
                 task.OutputInformationAboutTask();
             }
+        }
+
+        public void Menu()
+        {
+            bool needToClose;
+
+            while (true)
+            {
+                string action = InputAction();
+
+                switch (action)
+                {
+                    case "A":
+                        AddTask();
+                        continue;
+                    case "E":
+                        EditTask();
+                        continue;
+                    case "D":
+                        DeleteTask();
+                        continue;
+                    case "S":
+                        OutputAllTasks();
+                        continue;
+                    case "Q":
+                        needToClose = true;
+                        break;
+                    default:
+                        Console.WriteLine("You entered an incorrect value!\n");
+                        continue;
+                }
+
+                if (needToClose) { break; }
+            }
+        }
+
+        private static string InputAction()
+        {
+            Console.WriteLine("\n***********************");
+            Console.WriteLine("Select an action:");
+            Console.WriteLine("Add task - A");
+            Console.WriteLine("Edit task - E");
+            Console.WriteLine("Delete task - D");
+            Console.WriteLine("Show tasks - S");
+            Console.WriteLine("Quit - Q");
+
+            Console.Write("Your choice: ");
+            var action = Console.ReadLine();
+
+            return action;
         }
     }
 }

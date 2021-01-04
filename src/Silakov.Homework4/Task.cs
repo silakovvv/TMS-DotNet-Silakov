@@ -47,6 +47,8 @@ namespace Silakov.Homework4
 
         public Task()
         {
+            Console.WriteLine("\nAdd new task.");
+
             Console.Write("Name: ");
             _name = Console.ReadLine();
             Console.Write("Description: ");
