@@ -21,11 +21,21 @@ namespace Silakov.Homework5.Models
         /// </summary>
         public List<string> listCharacteristics { get; set; }
 
+        public AnimalBase()
+        {
+            listCharacteristics = new List<string>();
+        }
+
         /// <summary>
         /// Вывод списка характеристик.
         /// </summary>
         private void OutputlistCharacteristics()
         {
+            if (listCharacteristics.Count == 0)
+            {
+                return;
+            }
+
             Console.WriteLine("List of characteristics:");
             foreach (var characteristic in listCharacteristics)
             {

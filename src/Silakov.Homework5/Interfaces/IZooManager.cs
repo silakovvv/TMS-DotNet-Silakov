@@ -9,6 +9,6 @@ namespace Silakov.Homework5.Interfaces
     {
         public List<AnimalBase> Animals { get; set; }
 
-        public void OutputInformation();
+        public void WalkingAroundZoo();
     }
 }

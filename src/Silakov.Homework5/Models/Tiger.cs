@@ -8,7 +8,7 @@ namespace Silakov.Homework5.Models
     {
         public void Growl()
         {
-            Console.WriteLine("I like to make: rrrr-rrr-rrr");
+            Console.WriteLine("I like to make: rrrr-rrr-rrr\n");
         }
     }
 }

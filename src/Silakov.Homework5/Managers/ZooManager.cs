@@ -1,16 +1,17 @@
-﻿using Silakov.Homework5.Models;
+﻿using Silakov.Homework5.Interfaces;
+using Silakov.Homework5.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Silakov.Homework5.Managers
 {
-    class ZooManager
+    class ZooManager : IZooManager
     {
         /// <summary>
         /// Список животных зоопарка.
         /// </summary>
-        private List<AnimalBase> Animals { get; set; }
+        public List<AnimalBase> Animals { get; set; }
 
         /// <summary>
         /// Базовый конструктор.
@@ -34,6 +35,8 @@ namespace Silakov.Homework5.Managers
         /// </summary>
         public void WalkingAroundZoo()
         {
+            Console.WriteLine("*******Walking around the zoo*******");
+
             foreach (var animal in Animals)
             {
                 animal.OutputInformation();

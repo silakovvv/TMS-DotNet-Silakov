@@ -8,7 +8,7 @@ namespace Silakov.Homework5.Models
     {
         public void Swim()
         {
-            Console.WriteLine("I like swimminig");
+            Console.WriteLine("I like swimminig\n");
         }
     }
 }
