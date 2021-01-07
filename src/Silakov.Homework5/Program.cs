@@ -6,7 +6,7 @@ namespace Silakov.Homework5
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
         }
     }
 }
