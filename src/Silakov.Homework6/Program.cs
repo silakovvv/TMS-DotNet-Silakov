@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Silakov.Homework6.Managers;
+using System;
 
 namespace Silakov.Homework6
 {
@@ -6,7 +7,18 @@ namespace Silakov.Homework6
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.Write("Enter current balance: ");
+            var currentBalance = Convert.ToDecimal(Console.ReadLine());
+
+            AtmManager atmManager = new AtmManager(currentBalance);
+            atmManager.Notify += DisplayMessage;
+
+            atmManager.ShowMenu();
+        }
+
+        private static void DisplayMessage(string message)
+        {
+            Console.WriteLine(message);
         }
     }
 }
