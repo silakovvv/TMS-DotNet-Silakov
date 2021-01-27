@@ -12,13 +12,12 @@ namespace Silakov.Homework8
         private List<Thread> _processors;
         private Thread _queueProcessingThread;
 
-        private static object locker = new object();
-        private static ThreadLocal<Random> _random;
+        private static Random _random;
 
         private bool _isOpen;
         private DateTime _storeClosingTime;
 
-        public Shop(PeopleGenerator peopleGenerator, int cashierNumber, int _shopOpeningHours)
+        public Shop(PeopleGenerator peopleGenerator, int cashierNumber, int shopOpeningHours)
         {
             _peopleGenerator = peopleGenerator;
             _processingQueue = new Queue<Person>();
@@ -29,12 +28,11 @@ namespace Silakov.Homework8
                 _processors.Add(new Thread(ProcessPeople));
             }
 
-            var seed = Environment.TickCount;
-            _random = new ThreadLocal<Random>(() => new Random(Interlocked.Increment(ref seed)));
+            _random = new Random();
 
             _queueProcessingThread = new Thread(EnterShop);
 
-            _storeClosingTime = DateTime.Now.AddMinutes(_shopOpeningHours);
+            _storeClosingTime = DateTime.Now.AddMinutes(shopOpeningHours);
         }
 
         public void Open()
@@ -46,7 +44,6 @@ namespace Silakov.Homework8
             {
                 _processors[i-1].Start(i);
                 Console.WriteLine($"Cashier {i} is open");
-                
             }
 
             _queueProcessingThread.Start();
@@ -61,7 +58,7 @@ namespace Silakov.Homework8
         {
             while (_isOpen)
             {
-                lock (locker)
+                lock (_peopleGenerator)
                 {
                     try
                     {
@@ -73,11 +70,8 @@ namespace Silakov.Homework8
                     {
                         Console.WriteLine("Error: " + ex.Message);
                     }
-                    finally
-                    {
-                        Thread.Sleep(100);
-                    }
                 }
+                Thread.Sleep(2000);
 
                 if (DateTime.Now >= _storeClosingTime)
                 {
@@ -90,7 +84,7 @@ namespace Silakov.Homework8
         {
             while(_isOpen || _processingQueue.Count != 0)
             {
-                lock (locker)
+                lock (_processingQueue)
                 {
                     if (_processingQueue.TryDequeue(out var person))
                     {

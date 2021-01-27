@@ -5,13 +5,12 @@ namespace Silakov.Homework8
 {
     public class PeopleGenerator
     {
-        private static ThreadLocal<Random> _random;
+        private static Random _random;
         private static string[] _predefinedNames;
 
         public PeopleGenerator()
         {
-            var seed = Environment.TickCount;
-            _random = new ThreadLocal<Random>(() => new Random(Interlocked.Increment(ref seed)));
+            _random = new Random();
             
             _predefinedNames = new string[]
             {
@@ -23,11 +22,11 @@ namespace Silakov.Homework8
 
         public Person GetPerson()
         {
-            int index = _random.Value.Next(0, _predefinedNames.Length);
+            int index = _random.Next(0, _predefinedNames.Length);
 
             return new Person
             {
-                TimeToProcess = _random.Value.Next(5000),
+                TimeToProcess = _random.Next(5000),
                 Name = _predefinedNames[index],
             };
         }
