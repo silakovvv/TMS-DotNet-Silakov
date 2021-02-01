@@ -3,6 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Silakov.Homework7", "src\Silakov.Homework7\Silakov.Homework7.csproj", "{3B7F2930-1E88-4829-A8B0-1DC8A1BDA3A2}"
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Silakov.Homework8", "src\Silakov.Homework8\Silakov.Homework8.csproj", "{BC010BE9-A004-480C-826A-C3E13D343C26}"
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Silakov.Homework6", "src\Silakov.Homework6\Silakov.Homework6.csproj", "{8884BFE4-8190-4C22-A86C-DE1298BB21BC}"
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Silakov.Homework2", "src\Silakov.Homework2\Silakov.Homework2.csproj", "{7772AF5B-AED5-4FEC-B12B-F2312D62AA90}"
@@ -15,6 +16,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3B7F2930-1E88-4829-A8B0-1DC8A1BDA3A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B7F2930-1E88-4829-A8B0-1DC8A1BDA3A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B7F2930-1E88-4829-A8B0-1DC8A1BDA3A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B7F2930-1E88-4829-A8B0-1DC8A1BDA3A2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BC010BE9-A004-480C-826A-C3E13D343C26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BC010BE9-A004-480C-826A-C3E13D343C26}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC010BE9-A004-480C-826A-C3E13D343C26}.Release|Any CPU.ActiveCfg = Release|Any CPU
